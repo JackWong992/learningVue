@@ -6,11 +6,11 @@
       <router-link v-bind:to="{name: 'parent'}">Parent</router-link>
       <button @click="hanleBtnClick()">跳转到parent</button>
     </div>
-    <transition name="router">
-      <router-view/>
+    <transition-group name="router">
+      <router-view key="email"/>
       <router-view name="email" key="email" />
       <router-view name="tel"  key="tel" />
-    </transition>
+    </transition-group>
   </div>
 </template>
 <script>
@@ -38,7 +38,7 @@ export default {
   opacity: 0;
 }
 .router-enter-active {
-  transition: opacity .3s ease;
+  transition: opacity 1s ease;
 }
 .router-enter-to {
   opacity: 1;
@@ -47,7 +47,7 @@ export default {
   opacity: 1;
 }
 .router-leave-active {
-  transition: opacity  .3s ease;
+  transition: opacity  1s ease;
 }
 .router-leave-to {
   opacity: 0;
