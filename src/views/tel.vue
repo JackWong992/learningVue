@@ -10,7 +10,7 @@ export default {
   name: 'tel',
   data () {
     return {
-      message: '1'
+      message: 'hello world'
     }
   },
   mounted () {
